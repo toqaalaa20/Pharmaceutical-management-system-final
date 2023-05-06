@@ -95,6 +95,7 @@ namespace MyRestaurantProject {
 			this->tbEmail->Name = L"tbEmail";
 			this->tbEmail->Size = System::Drawing::Size(342, 37);
 			this->tbEmail->TabIndex = 2;
+			this->tbEmail->TextChanged += gcnew System::EventHandler(this, &LoginForm::tbEmail_TextChanged);
 			// 
 			// label3
 			// 
@@ -210,6 +211,9 @@ namespace MyRestaurantProject {
 	private: System::Void llRegister_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
 		this->switchToRegister = true;
 		this->Close();
+
 	}
-	};
+	private: System::Void tbEmail_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
